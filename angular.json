@@ -23,7 +23,10 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects"
+              "src/_redirects",
+              "src/netlify.redirects",
+              "src/_headers",
+              { "glob": "_redirects", "input": "public/", "output": "/" }
             ],
             "styles": [
               "src/styles.css"

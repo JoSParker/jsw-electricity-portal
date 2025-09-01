@@ -5,6 +5,9 @@
   publish = "dist/jsw"
   # Specify Node and NPM versions for consistent builds
   environment = { NODE_VERSION = "20", NPM_FLAGS = "--no-optional", NPM_VERSION = "10" }
+  
+  # Force build with redirects support
+  ignore_in_build = "_headers"
 
 # No plugins here to avoid cache related errors
 
@@ -15,6 +18,22 @@
   to = "/index.html"
   status = 200
   force = true
+
+# Explicit redirects for common paths
+[[redirects]]
+  from = "/dashboard/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/login/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/index.html"
+  status = 200
 
 # Headers for security and caching
 [[headers]]

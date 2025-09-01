@@ -6,7 +6,7 @@
     "start": "ng serve",
     "prebuild": "echo 'Running prebuild checks...'",
     "build": "ng build",
-    "postbuild": "echo '/* /index.html 200' > dist/jsw/_redirects",
+    "postbuild": "echo '/* /index.html 200' > dist/jsw/_redirects && echo '/* /index.html 200' > dist/jsw/netlify.redirects && echo '/*\n  Cache-Control: no-cache' > dist/jsw/_headers",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
