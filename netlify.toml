@@ -4,13 +4,9 @@
   # The directory containing your built app (matches outputPath in angular.json)
   publish = "dist/jsw"
   # Specify Node and NPM versions for consistent builds
-  environment = { NODE_VERSION = "20", NPM_VERSION = "10" }
+  environment = { NODE_VERSION = "20", NPM_FLAGS = "--no-optional", NPM_VERSION = "10" }
 
-# Cache node_modules and Angular build cache for faster builds
-[[plugins]]
-  package = "netlify-plugin-cache"
-  [plugins.inputs]
-    paths = ["node_modules", ".angular/cache"]
+# No plugins here to avoid cache related errors
 
 # Redirects for Angular routing (SPA support)
 # This ensures that all routes are directed to index.html for client-side routing

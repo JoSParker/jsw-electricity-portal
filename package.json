@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "echo 'Running prebuild checks...'",
     "build": "ng build",
+    "postbuild": "echo '/* /index.html 200' > dist/jsw/_redirects",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -32,7 +34,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "netlify-plugin-cache": "^1.0.3",
     "typescript": "~5.4.5"
   }
 }
