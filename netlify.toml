@@ -1,0 +1,16 @@
+[build]
+  command = "npm ci && ng build --configuration production"
+  publish = "dist/jsw"
+  environment = { NODE_VERSION = "20", NPM_VERSION = "10" }
+
+# Optional: Cache node_modules and Angular build cache for faster builds
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = ["node_modules", ".angular/cache"]
+
+# Redirects (if using Angular routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
