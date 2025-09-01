@@ -1,0 +1,32 @@
+<h1>Reports</h1>
+
+<div class="filters-container">
+  <input type="text" placeholder="Emp Code" [(ngModel)]="filters.empCode">
+  <input type="text" placeholder="Department" [(ngModel)]="filters.department">
+  <input type="text" placeholder="Designation" [(ngModel)]="filters.designation">
+  <input type="text" placeholder="Company" [(ngModel)]="filters.company">
+  <input type="text" placeholder="Mobile Number" [(ngModel)]="filters.mobileNumber">
+  <input type="text" placeholder="License Number" [(ngModel)]="filters.licenseNumber">
+
+  <select [(ngModel)]="filters.validLicense">
+    <option value="">All Types</option>
+    <option value="Valid">Valid</option>
+    <option value="Expired">Expired</option>
+  </select>
+
+  <select [(ngModel)]="filters.resident">
+    <option value="">Resident</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+
+  <input type="date" [(ngModel)]="filters.startDate">
+  <input type="date" [(ngModel)]="filters.endDate">
+
+  <div class="filter-buttons">
+    <button (click)="applyFilters()">Apply</button>
+    <button (click)="resetFilters()">Reset</button>
+  </div>
+</div>
+<app-license [licenses]="filteredLicenses"></app-license>
+

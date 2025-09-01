@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+  color: #002b5c;
+}
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #eaf0f8;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 20%;
+}
+
+.filters-container input,
+.filters-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  background-color: #002b5c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-buttons button:last-child {
+  background-color: #888;
+}

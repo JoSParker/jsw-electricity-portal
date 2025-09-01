@@ -1,0 +1,19 @@
+<nav [style.display]="isOpen ? 'block' : 'none'"
+     [style.position]="'fixed'"
+     [style.top]="'0'"
+     [style.left]="'0'"
+     [style.width]="'300px'"
+     [style.height]="'100vh'"
+     [style.background]="'white'"
+     [style.transform]="isOpen ? 'translateX(0)' : 'translateX(-100%)'"
+     [style.transition]="'transform 0.3s ease'">
+<div class="navbar" onclick="closeNavbar()">
+    <a routerLinkActive="active" routerLink="/all-license">View all License</a>
+    <a routerLinkActive="active" routerLink="/create">Create License</a>
+    <a routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+    <a routerLinkActive="active" routerLink="/reports">Reports</a>
+    <a routerLinkActive="active" routerLink="/notifications">Notifications</a>
+    <a routerLinkActive="active" routerLink="/transactions">Transactions</a>
+    <a routerLinkActive="active" routerLink="/contact">Contact Us</a>
+    <a routerLinkActive="active" routerLink="/faq">Help</a>
+</div>

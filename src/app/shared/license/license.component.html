@@ -1,0 +1,24 @@
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Employee Code</th>
+      <th>Email ID</th>
+      <th>Mobile Number</th>
+      <th>Department</th>
+      <th>Designation</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lic of licenses">
+      <td>{{ lic.name }}</td>
+      <td>{{ lic.employeeCode }}</td>
+      <td>{{ lic.email }}</td>
+      <td>{{ lic.mobile }}</td>
+      <td>{{ lic.department }}</td>
+      <td>{{ lic.designation }}</td>
+      <td>{{ lic.company }}</td>
+    </tr>
+  </tbody>
+</table>

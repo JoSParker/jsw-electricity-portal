@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="contact-form">
+  <h3>Contact Us</h3>
+  <input type="text" placeholder="Enter your name" formControlName="name" />
+  <input type="email" placeholder="Enter valid email" formControlName="email" />
+  <textarea rows="4" placeholder="Enter your query below" formControlName="query"></textarea>
+  <button type="submit" [disabled]="form.invalid">SEND</button>
+</form>

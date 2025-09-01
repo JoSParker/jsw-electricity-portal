@@ -1,0 +1,28 @@
+<div class="faq-container">
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="faq-item" (click)="toggleFAQ(0)">
+    <h2>What is this portal about?</h2>
+    <p *ngIf="openIndex === 0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat ipsam consequatur ducimus facilis quibusdam!</p>
+  </div>
+
+  <div class="faq-item" (click)="toggleFAQ(1)">
+    <h2>How do I reset a password?</h2>
+    <p *ngIf="openIndex === 1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus inventore laudantium eveniet voluptate assumenda aperiam.</p>
+  </div>
+
+  <div class="faq-item" (click)="toggleFAQ(2)">
+    <h2>How do I contact customer support?</h2>
+    <p *ngIf="openIndex === 2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus inventore laudantium eveniet voluptate assumenda aperiam.</p>
+  </div>
+
+  <div class="faq-item" (click)="toggleFAQ(3)">
+    <h2>How to add new license?</h2>
+    <p *ngIf="openIndex === 3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus inventore laudantium eveniet voluptate assumenda aperiam.</p>
+  </div>
+
+  <div class="faq-item" (click)="toggleFAQ(4)">
+    <h2>Where can I find jsw ids, phone no and location?</h2>
+    <p *ngIf="openIndex === 4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus inventore laudantium eveniet voluptate assumenda aperiam.</p>
+  </div>
+</div>

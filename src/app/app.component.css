@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    margin-top: 60px; 
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+app-navbar {
+    position: fixed;
+    left: 0;
+    top: 40px;  
+    height: calc(100vh - 40px);  
+    width: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    background-color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+
+app-navbar.open {
+    width: 250px;
+    visibility: visible;
+    opacity: 1;
+}

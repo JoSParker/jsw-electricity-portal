@@ -1,0 +1,37 @@
+.navbar {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    margin-top: 60px;
+    padding-left: 20px;
+    height: 100vh;  
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1em;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    align-items: center;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 19, 109);
+    border-radius: 4px;  /* matches your header color */
+}
+
+.navbar a.active {
+    background-color: #080872;  
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+}
