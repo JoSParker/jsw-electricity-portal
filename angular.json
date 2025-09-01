@@ -22,11 +22,7 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/_redirects",
-              "src/netlify.redirects",
-              "src/_headers",
-              { "glob": "_redirects", "input": "public/", "output": "/" }
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"

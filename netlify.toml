@@ -1,57 +1,11 @@
 [build]
-  # Install dependencies and build the Angular app with production settings
-  command = "npm ci && npm run build -- --configuration production"
-  # The directory containing your built app (matches outputPath in angular.json)
+  command = "npm ci && npm run build -- --configuration production && cp _redirects dist/jsw/_redirects"
   publish = "dist/jsw"
-  # Specify Node and NPM versions for consistent builds
-  environment = { NODE_VERSION = "20", NPM_FLAGS = "--no-optional", NPM_VERSION = "10" }
-  
-  # Force build with redirects support
-  ignore_in_build = "_headers"
-
-# No plugins here to avoid cache related errors
+  environment = { NODE_VERSION = "20", NPM_VERSION = "10" }
 
 # Redirects for Angular routing (SPA support)
-# This ensures that all routes are directed to index.html for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
-
-# Explicit redirects for common paths
-[[redirects]]
-  from = "/dashboard/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/login/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/login"
-  to = "/index.html"
-  status = 200
-
-# Headers for security and caching
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "no-referrer-when-downgrade"
-    # Cache assets like images, CSS, and JS for 1 week
-    cache-control = '''
-    max-age=604800,
-    must-revalidate'''
-
-# Don't cache HTML files
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    cache-control = '''
-    max-age=0,
-    must-revalidate'''

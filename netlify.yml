@@ -1,0 +1,11 @@
+# netlify.yml configuration file
+build:
+  publish: dist/jsw
+  command: npm ci && npm run build -- --configuration production
+
+# Handle all routes for SPA
+redirects:
+  - from: "/*"
+    to: "/index.html"
+    status: 200
+    force: true
