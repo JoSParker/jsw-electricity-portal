@@ -1,6 +1,6 @@
 # netlify.yml configuration file
 build:
-  publish: dist/jsw
+  publish: dist/jsw/browser
   command: npm ci && npm run build -- --configuration production
 
 # Handle all routes for SPA
